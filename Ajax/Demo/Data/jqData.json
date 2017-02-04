@@ -1,0 +1,40 @@
+{
+  "code":200,
+  "msg":"This is jquery ajax",
+  "data":{
+    "items":[
+      {
+        "shopTitle":"三巷自制",
+        "discount":"全场9折起/全场包邮",
+        "shopIcon":"http://xqproduct.xiangqu.com/FqzglEGNkhmCJlu8_iLwurCkgB4x?imageView2/2/w/300/q/90/format/jpg/300x300/",
+        "exhibitionImg":"http://xqproduct.xiangqu.com/FnYaN_97LVVC-acAQsIyqrFF7Yjr?imageView2/2/w/614/q/90/format/jpg/614x400/",
+        "shopIntroduction":"用心做好每一件衣服。你喜欢，便好。三巷均为原创少量制作，推崇慢工出细活，只做精品。",
+        "id":"79"
+      },
+      {
+        "shopTitle":"艾·原创",
+        "discount":"全场8.5折起/全场包邮",
+        "shopIcon":"http://xqproduct.xiangqu.com/FvwS1iuVocNzGMIsMmhZBNBrPxr4?imageView2/2/w/300/q/90/format/jpg/300x300/",
+        "exhibitionImg":"http://xqproduct.xiangqu.com/FnIg041MPdUs-9g9RlTCi-4ie-wW?imageView2/2/w/614/q/90/format/jpg/614x400/",
+        "shopIntroduction":"质朴、天然、纯粹，治愈自己，温暖别人。对于艾来说，天然与环保是最重要的精神，这么较真是为大家生活的环保又安心。",
+        "id":"80"
+      },
+      {
+        "shopTitle":"its tong ",
+        "discount":"全场7折起/全场包邮",
+        "shopIcon":"http://xqproduct.xiangqu.com/FockfMxqoKyCZ0uYi1KVtEpSVTO7?imageView2/2/w/300/q/90/format/jpg/300x300/",
+        "exhibitionImg":"http://xqproduct.xiangqu.com/FiKGYVpPxF-aboFfjVBv5U2lOSNv?imageView2/2/w/614/q/90/format/jpg/614x400/",
+        "shopIntroduction":"以简约和使用设计精髓，用精致的裁剪，优良的质感为女装打造看似简单却又不平凡的气质。",
+        "id":"81"
+      },
+      {
+        "shopTitle":"Jf YanYan",
+        "discount":"全场7.5折起/全场包邮",
+        "shopIcon":"http://xqproduct.xiangqu.com/FvG5jY4NQlIwO0ZInQH4QpwPwiQG?imageView2/2/w/300/q/90/format/jpg/300x300/",
+        "exhibitionImg":"http://xqproduct.xiangqu.com/FjHc0t-ODXr86yCv7_tbMQNx5y9x?imageView2/2/w/614/q/90/format/jpg/614x400/",
+        "shopIntroduction":"Jf YanYan是一个独立设计女装品牌，崇尚自由随性的生活方式，品牌理念：衣服，自在就好。",
+        "id":"82"
+      }
+    ]
+  }
+}

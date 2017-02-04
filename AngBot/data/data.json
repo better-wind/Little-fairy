@@ -1,0 +1,7 @@
+{
+  "code": 200,
+  "msg": "This is jquery ajax",
+  "data": {
+    "杭州":"12345"
+  }
+}
