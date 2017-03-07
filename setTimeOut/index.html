@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var c = 1;
+    function show(name) {
+        setTimeout(function(){
+            showMag(name + c);
+            c++;
+            show(name);
+        },1000)
+    }
+    function showMag(name) {
+        console.log('hello: ' + name)
+    }
+    show('wangs')
+</script>
+</body>
+</html>
