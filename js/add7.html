@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    {
+        const mulpitly8 = (num) => num << 3
+        const add = (m,n) => {
+            while(m){
+                [m, n] = [(m & n) << 1, m ^ n];
+            }
+            return n;
+        }
+        console.log(add(40,47));
+    }
+</script>
+</body>
+</html>

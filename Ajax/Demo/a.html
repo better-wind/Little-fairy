@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a{
+            width: 100px;
+            height: 300px;
+            border: 1px solid #880000;
+        }
+        .b{
+            width: 20px;
+            height: 30px;
+            background-color: #4cae4c;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="a" id="a"></div>
+<img src="" alt="" id="Img">
+<button type="button" id="button1">按钮</button>
+<script>
+    (function(){
+        var img = document.querySelector('#Img');
+        img.src = 'http://xqproduct.xiangqu.com/Fqw-7DDsKVa_9TthtkjdCGxiVrW4?imageView2/2/w/749/q/90/format/jpg/749x315/'
+        var button_1 = document.getElementById('button1');
+        button_1.onclick = function(){
+            var xmlhttp = new window.XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if (xmlhttp.readyState==4){
+                    if(xmlhttp.status==200) {
+                        document.getElementById('a').innerHTML = xmlhttp.responseText;
+                        console.log(xmlhttp.responseText);
+                    }
+                   else {
+                        console.log("error");
+                    }
+                }
+            }
+            xmlhttp.open("GET","Data/ttt.txt",true);
+            xmlhttp.send();
+        }
+    })()
+</script>
+</body>
+</html>

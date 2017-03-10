@@ -7,20 +7,23 @@
 <body>
 <script>
     //模块模式最流行的闭包类型之一，它允许你模拟公共的、私有的、和特权成员
-    var Module = (function(){
-        var privateProperty = 'foo';
+    //家
+    var Home = (function(){
+        var privateProperty = '身份证';
         function privateMethod(){
+            console.log('只有我自己能看')
+            console.log(privateProperty)
         }
+        privateMethod();
         return {
-            publicProperty:'',
             publicMethod:function(){
+                console.log('我是那只猫，我去看')
+                console.log(privateProperty)
             },
-            privilegedMethod: function(){
-                return privateMethod(arguments);
-            }
         }
     })()
-    console.log(Module);
+    //钥匙
+    Home.publicMethod();
     //另一种类型的闭包被称为 立即执行的函数表达式(IIFE) Es5中
     (function(window){
         var foo, bar;
