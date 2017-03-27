@@ -1,14 +1,21 @@
-1.输出是什么？why？
-          var z = 10;
-          function foo(){
-                  console.log(z);
-          }
-          (function(funArg){
-                  var z = 20;
-                  funArg();
-          })(foo);
+## Little-fairy基础练习
 
-2.输出什么？why？
+> 1.输出是什么？why？
+
+```javascript
+var z = 10;
+function foo(){
+    console.log(z);
+}
+(function(funArg){
+    var z = 20;
+    funArg();
+})(foo);
+```
+
+> 2.输出什么？why？
+
+```javascript
 var data = [];
     for(var k = 0; k < 3; k++){
             data[k] = function(){
@@ -18,8 +25,11 @@ var data = [];
     data[0]();
     data[1]();
     data[2]();
+```
 
-3.输出什么？why？
+> 3.输出什么？why？
+
+```javascript
 function fun(n,o){
             console.log(o)
             return{
@@ -37,8 +47,11 @@ function fun(n,o){
     var c = fun(0).fun(1);
     c.fun(2);
     c.fun(3);
+```
 
-4.输出什么？why？
+> 4.输出什么？why？
+
+```javascript
 var a = 100;
     function testResult(){
             var b = 2 * a;
@@ -48,8 +61,11 @@ var a = 100;
             console.log(c);
     }
     testResult();
+```
 
-5.输出什么？why？
+> 5.输出什么？why？
+
+```javascript
 var myObject = {
             foo: "bar",
             func: function(){
@@ -63,9 +79,12 @@ var myObject = {
             }
     };
     myObject.func();
+```
 
-6.输出什么？why？
-    var test = (function(a){
+> 6.输出什么？why？
+
+```javascript
+var test = (function(a){
             this.a = a;
             return function(b){
                 return this.a + b;
@@ -74,17 +93,21 @@ var myObject = {
             return a;
     }(1,2)));
     console.log(test(1));
+```
 
-7.输出什么？why？
-    if(!("a" in window)){
+> 7.输出什么？why
+
+```javascript
+if(!("a" in window)){
         var a = 1;
     }
     console.log(a);
+ //https://zhuanlan.zhihu.com/p/25863288
+```
 
-https://zhuanlan.zhihu.com/p/25863288
+> 8.实现以下功能
 
-8.实现以下功能
-
-js中
+```javascript
 alert('Test');
-页面弹出一个对话框，显示Test。1s后隐藏。
+//页面弹出一个对话框，显示Test。1s后隐藏。
+```
