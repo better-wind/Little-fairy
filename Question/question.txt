@@ -82,3 +82,9 @@ var myObject = {
     console.log(a);
 
 https://zhuanlan.zhihu.com/p/25863288
+
+8.实现以下功能
+
+js中
+alert('Test');
+页面弹出一个对话框，显示Test。1s后隐藏。
