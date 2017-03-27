@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="Alert">
+
+</div>
+<script>
+    window.alert = (s) => {
+        document.querySelector('#Alert').innerHTML = s;
+    }
+    alert(1);
+</script>
+</body>
+</html>
