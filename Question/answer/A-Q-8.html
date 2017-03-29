@@ -3,17 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>第八题</title>
-
+    <style>
+        .alert{
+            width: 200px;
+            height: 80px;
+            margin: 0 auto;
+            border: solid 1px #286090;
+            text-align: center;
+            display: none;
+        }
+        .b{
+            display: block;
+        }
+    </style>
 </head>
 <body>
-<div>
+<div class="alert">
+    <input type="button" value="确定">
+</div>
+<div class="b">
     <span>
         alert('Test');
         页面弹出一个对话框，显示Test。1s后隐藏。
     </span>
 </div>
 <script>
-    alert('Test');
+    (function(){
+        window.alert = function(s){
+            var a = document.querySelector('.alert');
+            var b = document.querySelector('.b');
+            a.innerText = s;
+            a.style.display = 'block';
+            b.style.display = 'none';
+            setTimeout(function(){
+                console.log(a);
+                a.style = "display:none";
+                b.style.display = 'block';
+            },1000);
+        };
+       alert('Test');
+    })()
 </script>
 </body>
 </html>
