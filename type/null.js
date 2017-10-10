@@ -28,11 +28,4 @@ typeVal([])
 // if(a) // 不成立
 // var b = a || 'test'     b = test
 
-function argLength({length}){
-    return length
-}
-function arg(a,b,c){
-    console.log(argLength(arguments))
-}
-arg(1,2,3)
 

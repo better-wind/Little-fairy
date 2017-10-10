@@ -1,21 +1,31 @@
 function V(){
-    this._event = {}
+   this._init()
 }
-V.prototype.$on = function(name,fn){
-    this._event[name] = fn
+function initEvent(v){
+    v._event = Object.create(null)
 }
-V.prototype.$emit = function(event){
-    let cbs = this._event[event]
-    // let args = Array.from(arguments).slice(1)
-    let args = toArray(arguments,1)
-    cbs.apply(this,args)
+function initMixin(v){
+    v.prototype._init = function(){
+        initEvent(this)
+    }
 }
+function eventsMixin(v){
+    v.prototype.$on = function(name,fn){
+        this._event[name] = fn
+    }
+    v.prototype.$emit = function(event){
+        let cbs = this._event[event]
+        let args = toArray(arguments,1)
+        cbs.apply(this,args)
+    }
+}
+initMixin(V)
+eventsMixin(V)
 function toArray (list, start) {
     start = start || 0
     let i = list.length - start
     const ret = new Array(i)
     while (i--) {
-        console.log(i)
         ret[i] = list[i + start]
 
     }
