@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <demo-temp :link="link"></demo-temp>
+    <c-demo :link="link"></c-demo>
+    <nc-demo :link="link"></nc-demo>
+    <demo-script :link="link"></demo-script>
+    <c-render>
+        <slot name="a">jjjj</slot>
+        <p>ababab</p>
+    </c-render>
+</div>
+
+<script src="vue.js"></script>
+<script type="text/x-template" id="script-template">
+    <div>script-template{{a}}</div>
+</script>
+<script>
+    Vue.component('demo-temp',{
+        template:'<div>demo-temp{{b}}</div>',
+        data:()=>({
+            b:'joijoikj'
+        }),
+        props:{
+            link:String
+        },
+        created(){
+          console.log('demo-temp'+this.link)
+        },
+    })
+    Vue.component('demo-script',{
+        template:'#script-template',
+        data:()=>({
+            a:'teeee'
+        }),
+        props:{
+            link:String
+        },
+        created(){
+            console.log('demo-script'+this.link)
+        },
+    })
+    var cTemp = {
+        template:'<div>c-temp{{c}}</div>',
+        data:()=>({
+            c:'k'
+        }),
+        props:{
+            link:String
+        },
+        created(){
+            console.log('c-temp'+this.link)
+        },
+
+    }
+    var ncTemp = {
+        template:'#script-template',
+        data:()=>({
+            a:'k'
+        }),
+        props:{
+            link:String
+        },
+        created(){
+            console.log('ncTemp'+this.link)
+        },
+    }
+    var cRender = {
+        mounted(){
+            console.log(this.$slots.default)
+            console.log(this.$children)
+        },
+        render: function (createElement) {
+            return createElement(
+                'h' + this.level,
+                [
+                    createElement('a', {
+                        attrs: {
+                            name: this.headingId,
+                            href: '#' + this.headingId
+                        }
+                    }, this.$slots.default)
+                ]
+            )
+        },
+        data:()=>({
+            blogTitle:'blogTitle',
+            headingId:111,
+            level:1
+        })
+    }
+//    Vue.component('c-render',{
+//        render: function (createElement) {
+//            return createElement(
+//                'h' + this.level
+//                [
+//                    createElement('a', {
+//                        attrs: {
+//                            name: this.headingId,
+//                            href: '#' + this.headingId
+//                        }
+//                    }, this.$slots.default)
+//                ]
+//            )
+//        },
+//        data:()=>({
+//            blogTitle:'blogTitle',
+//            headingId:111,
+//            level:2
+//        })
+//    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'abc',
+            link:'我要飞'
+        },
+        created(){
+
+        },
+        filters:{
+            transCode:(s)=>{
+                return 'kkk'
+            }
+        },
+        components:{
+            'c-demo':cTemp,
+            'nc-demo':ncTemp,
+            'c-render':cRender
+        }
+    })
+    console.log(app)
+</script>
+</body>
+</html>

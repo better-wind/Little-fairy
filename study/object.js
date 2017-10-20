@@ -1,11 +1,14 @@
      let obj = {}
      Object.defineProperty(obj, "key", {
        configurable:true,
-       enumerable:true,
+       enumerable:false,
        writable:false,
        value:'static'
      });
      console.log(obj)
+     console.log(obj.key)
+     obj.key = 'static-chang'
+     console.log(obj.key)
      for(let i in obj){
        console.log(obj[i])
      }
