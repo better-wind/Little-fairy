@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function readFiles(){
+        return new Promise((resolve) => {
+            let arr = [1,2,3,4,5]
+            setTimeout(function(){
+                resolve(arr)
+            }, 1000);
+        })
+    }
+
+    function getPoster(s){
+        return new Promise((resolve) => {
+            let arr = s+'kkkk'
+            setTimeout(function(){
+                resolve(arr)
+            }, 1000);
+        })
+    }
+    function savePoster(s,_s){
+        console.log(s,_s)
+    }
+
+    async function start() {
+        var files = await readFiles();
+        for (var file in files) {
+            savePoster(file, await getPoster(file));
+        }
+        return 'OK'
+    }
+
+    start().then((v)=>{
+        console.log('I OK'+v)
+    })
+</script>
+</body>
+</html>

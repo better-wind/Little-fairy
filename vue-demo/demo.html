@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <p v-for="(item,key) in list">
+            {{item}}
+        </p>
+        <button @click="clickWatch">测试watch</button>
+        我是watchTest.num {{watchTest.num}}
+
+        <p>下面是组件的PROPS</p>
+        <zj :mine-props="propsDemo"></zj>
+    </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var ZJZJ = {
+        template:'<div>{{zjProps}}</div>',
+        data:()=>({
+
+        }),
+        props:{
+            zjProps:String
+        }
+
+
+    }
+    var ZJ = {
+        template:'<div>{{mineProps}}' +
+        '<p>下面是在组件内引入组件测试props大小写</p>' +
+        '<zjzj :zjProps="message"></zjzj>' +
+        '</div>',
+        data:()=>({
+            message:'我是测试props大小写的 这样写可以用大写'
+        }),
+        props:{
+            mineProps:String
+        },
+        // props:['mineProps'], 也可以这么写
+        created(){
+
+        },
+        components:{
+            'zjzj':ZJZJ
+        }
+    }
+    var app = new Vue({
+        el: '#app',
+        data: {
+            list:['第一条','第二条','第三条'],
+            watchTest:{
+                num:10
+            },
+            propsDemo:'向组件传递数据测试'
+        },
+        created(){
+
+        },
+        methods:{
+            clickWatch(){
+                this.watchTest.num++
+            }
+        },
+        watch:{
+            'watchTest.num':function(newVal,oldVal){
+                console.log('data 中的watchTest.num 发生改变会执行')
+                console.log('新的值'+newVal)
+                console.log('老的值'+oldVal)
+            }
+        },
+        components:{
+            'zj':ZJ
+        }
+    })
+</script>
+</body>
+</html>
