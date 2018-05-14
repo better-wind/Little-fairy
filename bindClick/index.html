@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <button onclick="appendButton()"> append </button>
+</div>
+<div id="clickDom">
+
+
+</div>
+<script>
+    var a= 1
+    function AA(){
+        console.log(a)
+    }
+    function appendButton(){
+        var dom = document.querySelector('#clickDom')
+        var _html = '<button onclick="AA();">click</button>' +
+            '    <button onclick=" a = 2">click</button>'
+        dom.innerHTML = _html
+    }
+</script>
+</body>
+</html>

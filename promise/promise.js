@@ -82,6 +82,7 @@
         function resolve(result,idx){
             let then = result && result.then && typeof result.then == 'function' ? result.then : null;
             // let then = typeof result
+            console.log(then)
             if (then) {
                 then.bind(result)(resolve)
                 return
@@ -105,6 +106,7 @@
             }
         }
         this.then = function(onFulfill,idx){
+            console.log('------',idx)
             return new TP((resolve)=>{
                 // console.log('then~~~',idx)
                 next({
@@ -117,7 +119,6 @@
         }
         fn(resolve)
     }
-
     new TP((resolve)=>{
         // console.log('TP-1')
         setTimeout(function(){
@@ -130,9 +131,9 @@
                 resolve('TP-Resolve2',0)
             },2000)
         })
-    },1).then((s)=>{
+    },1111).then((s)=>{
         console.log('TP-2',s)
-    },2).then(()=>{
+    },2222).then(()=>{
         console.log('---END---')
     })
 }

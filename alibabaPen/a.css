@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "hotjar";
+    src: url("https://static.hotjar.com/static/client/modules/assets/font-hotjar_4.eot?mk86i5");
+    src: url("https://static.hotjar.com/static/client/modules/assets/font-hotjar_4.eot?mk86i5#iefix")
+    format("embedded-opentype"),
+    url("https://static.hotjar.com/static/client/modules/assets/font-hotjar_4.woff2?mk86i5")
+    format("woff2"),
+    url("https://static.hotjar.com/static/client/modules/assets/font-hotjar_4.ttf?mk86i5")
+    format("truetype"),
+    url("https://static.hotjar.com/static/client/modules/assets/font-hotjar_4.woff?mk86i5")
+    format("woff"),
+    url("https://static.hotjar.com/static/client/modules/assets/font-hotjar_4.svg?mk86i5#hotjar")
+    format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

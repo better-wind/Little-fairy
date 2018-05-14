@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(220,220,220);
+        }
+
+    </style>
+    <!--hotJar-->
+    <link rel="stylesheet" href="./hoticon.css">
+</head>
+<body>
+<img src="./1.jpeg" alt="">
+<img src="./2.png" alt="">
+<div id="FixedWrap" class="fixed-hot-wrap">
+    <div class="state-1">
+        <p id="stateTitle">How would you rate your experience?</p>
+        <div class="content" id="contentFace">
+            <div>
+                <div class="icon-wrap c-yellow">
+                    <span class="b-yellow icon-wrap-sign"></span>
+                    <i class="face-icon-hot">&#xe780;</i>
+                    <span class="hide-sign">Hate</span>
+                    <span class="select-sign"></span>
+                </div>
+                <div class="icon-wrap c-yellow">
+                    <span class="b-yellow icon-wrap-sign"></span>
+                    <i class="face-icon-hot">&#xe77c;</i>
+                    <span class="hide-sign">Dislike</span>
+                    <span class="select-sign"></span>
+                </div>
+                <div class="icon-wrap c-yellow">
+                    <span class="b-yellow icon-wrap-sign"></span>
+                    <i class="face-icon-hot">&#xe783;</i>
+                    <span class="hide-sign">Neutral</span>
+                    <span class="select-sign"></span>
+                </div>
+                <div class="icon-wrap c-yellow">
+                    <span class="b-yellow icon-wrap-sign"></span>
+                    <i class="face-icon-hot">&#xe78c;</i>
+                    <span class="hide-sign">Like</span>
+                    <span class="select-sign"></span>
+                </div>
+                <div class="icon-wrap c-yellow">
+                    <span class="b-yellow icon-wrap-sign"></span>
+                    <i class="face-icon-hot">&#xe78b;</i>
+                    <span class="hide-sign">Love</span>
+                    <span class="select-sign"></span>
+                </div>
+            </div>
+        </div>
+        <div class="content-text" id="contentTextBox">
+            <textarea maxlength="1000" class="" id="textAreaTell"  placeholder="Tell us about your experience..."
+                      rows="3"></textarea>
+        </div>
+
+        <div class="send-box" id="sendBox">
+            <span class="send-box-sign">Not using Hotjar yet?</span>
+            <div class="send-btn-wrap" id="sendBtnWrap">
+                <button type="button" id="sendBtn" class="send-btn btn-dis">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="fixed-hot-btn" id="FixBtn">
+    <span id="showBtn" class="icon-wrap c-red show-btn">
+        <span class="b-red icon-wrap-sign"></span>
+        <i class="face-icon-hot">&#xe78c;</i>
+    </span>
+    <span id="hideBtn" class="icon-wrap c-red hide-btn">
+        <i class="face-icon-hot face-icon-close">&#xe654;</i>
+    </span>
+</div>
+<script src="hot.js">
+
+</script>
+</body>
+</html>
