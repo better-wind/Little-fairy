@@ -6,7 +6,10 @@ console.log(Number(_s).toLocaleString())
 //数组+正则
 // let s = _s.split('').reverse().join('').replace(/(\d{3}(?=[^$]))/g,'$1,').split('').reverse().join('')
 // let s = _s.split('').reverse().join('').replace(/(\d{3}(?![$]))/g,'$1,').split('').reverse().join('')
-let s = _s.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+// let s = _s.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+let s = _s.replace(/\B(?=(\d{3})+)/g, function(){
+    console.log(arguments)
+})
 console.log(s)
 
 let a = 2147483645,b = 2147483646
