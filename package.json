@@ -1,0 +1,24 @@
+{
+  "name": "little-fairy",
+  "version": "1.0.0",
+  "description": "Little-fairy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luyi10year/Little-fairy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luyi10year/Little-fairy/issues"
+  },
+  "homepage": "https://github.com/luyi10year/Little-fairy#readme",
+  "devDependencies": {
+    "commander": "^2.15.1",
+    "download-git-repo": "^1.0.2"
+  }
+}

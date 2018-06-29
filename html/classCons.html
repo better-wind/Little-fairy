@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border:1px solid #eee;
+        }
+        .classA +.classB{
+            background-color: #AAA;
+        }
+        .classA.classB{
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+<div class="classA classB">
+
+</div>
+<div class="classA classB">
+
+</div>
+
+</body>
+</html>
+<!--css 选择器优先级 .classA +.classB 和 .classA.classB 看书写顺序-->
