@@ -17,6 +17,4 @@ then
   echo "publishing git..."
   git push origin master
 
-
-
 fi
