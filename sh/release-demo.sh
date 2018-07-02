@@ -27,6 +27,7 @@ then
   git push origin master
   git push origin refs/tags/v$VERSION
 
+
   echo "publishing npm..."
   npm publish
 
