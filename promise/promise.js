@@ -1,5 +1,5 @@
 {
- console.log('21')  
+ console.log('221')  
   const PENDING = 'PENDING'
     const FULFILLED = 'FULFILLED'
     const REJECTED = Symbol();
