@@ -1,5 +1,6 @@
 {
-    const PENDING = 'PENDING'
+ console.log('1')  
+  const PENDING = 'PENDING'
     const FULFILLED = 'FULFILLED'
     const REJECTED = Symbol();
     // function Promisee(fn) {
