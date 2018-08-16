@@ -9,3 +9,4 @@ var ac = arr.reduce((total,item)=>{
     }
 })
 console.log(ac);
+
