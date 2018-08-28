@@ -10,3 +10,4 @@ var ac = arr.reduce((total,item)=>{
 })
 console.log(ac);
 console.log(22);
+
