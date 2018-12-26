@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div>
+  <input type="text" value="eq()" id="test">
+</div>
+<script>
+  document.getElementById('test').addEventListener('focus', function() {
+    setTimeout(()=>{
+      this.setSelectionRange(3, 3);
+    }, 0);
+  });
+</script>
+</body>
+</html>
