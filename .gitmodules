@@ -1,0 +1,3 @@
+[submodule "lint-commit"]
+	path = lint-commit
+	url = git@github.com:luyi10year/lint-commit.git
