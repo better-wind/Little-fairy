@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /** { background-color: rgba(255,0,0,.2); }*/
+    /** * { background-color: rgba(0,255,0,.2); }*/
+    /** * * { background-color: rgba(0,0,255,.2); }*/
+    /** * * * { background-color: rgba(255,0,255,.2); }*/
+    /** * * * * { background-color: rgba(0,255,255,.2); }*/
+    /** * * * * * { background-color: rgba(255,255,0,.2); }*/
+  </style>
+  <style>
+    .box > div {
+      margin: 60px auto 100px;
+      text-align: center;
+    }
+  </style>
+  <style>
+    .box-title{
+      width: 200px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      color: #86cbff;
+
+      background-image: linear-gradient(transparent 8%, #86cbff 8%, #86cbff 14%, transparent 14%, transparent 86%, #86cbff 86%, #86cbff 92%, transparent 92%),
+
+        linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)),
+
+        linear-gradient(45deg, transparent 40%, #86cbff 40%, #86cbff 60%, transparent 60%),
+
+        linear-gradient(white, white);
+
+
+      background-size: cover, cover, 4px 4px, cover;
+    }
+  </style>
+
+  <style>
+    @keyframes rotate{
+      from{transform: rotate(0deg)}
+      to{transform: rotate(359deg)}
+    }
+    .water{
+      background: #86cbff;
+      position: relative;
+      height: 150px;
+      width: 200px;
+      overflow: hidden;
+    }
+    .ripple{
+      position: absolute;
+      width: 350px;
+      height: 300px;
+      background: #fff;
+      border-radius: 40%;
+      animation: rotate 5s linear infinite;
+      margin-top: -200px;
+      margin-left: -100px;
+    }
+  </style>
+
+  <style>
+    .border div {
+      display: inline-block;
+      margin: 20px;
+    }
+    .border-radius-0 {
+      width: 100px;
+      height: 50px;
+      background: #86cbff;
+      border-radius: 50px 50px 0 0;
+    }
+    .border-radius-1 {
+      width: 100px;
+      height: 50px;
+      background: #86cbff;
+      border-radius: 50px/25px;
+    }
+
+    .border-radius-2 {
+      width: 100px;
+      height: 50px;
+      background: #86cbff;
+      border-radius: 100% 0 0 100% /50%;
+    }
+
+    .border-width-0{
+      box-sizing: border-box;
+      width: 50px;
+      border-left:50px solid #86cbff;
+      border-bottom: 25px solid transparent;
+      border-top: 25px solid transparent;
+    }
+
+    .border-width-1{
+      box-sizing: border-box;
+      width: 50px;
+      border-left:50px solid #86cbff;
+      border-bottom: 50px solid transparent;
+    }
+
+    .box-skew-0 {
+      width: 50px;
+      height: 50px;
+      background-color: #86cbff;
+      transform: skew(45deg);
+    }
+
+    .box-skew-1 {
+      width: 50px;
+      height: 50px;
+      background-color: #86cbff;
+      transform: rotate(45deg);
+    }
+
+    .border-background-0 {
+      width: 100px;
+      height: 50px;
+      background: #86cbff;
+      background: linear-gradient(135deg, transparent 10px, #86cbff 10px) top left,
+      linear-gradient(-135deg, transparent 10px, #86cbff 10px) top right,
+      linear-gradient(-45deg, transparent 10px, #86cbff 10px) bottom right,
+      linear-gradient(45deg, transparent 10px, #86cbff 10px) bottom left;
+      background-size: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    .border-background-1 {
+      width: 100px;
+      height: 50px;
+      background: #86cbff;
+      background: radial-gradient(circle at top left, transparent 10px, #86cbff 0) top left,
+      radial-gradient(circle at top right, transparent 10px, #86cbff 0) top right,
+      radial-gradient(circle at bottom right, transparent 10px, #86cbff 0) bottom right,
+      radial-gradient(circle at bottom left, transparent 10px, #86cbff 0) bottom left;
+      background-size: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    .pie-0{
+      width:50px;
+      height: 50px;
+      border-radius: 50%;
+      background-image: linear-gradient(to right,#86cbff 50%,transparent 0),linear-gradient(45deg,transparent 50%,#86cbff 0);
+    }
+  </style>
+  <link rel="stylesheet" href="zan-shadow.css">
+
+</head>
+<body>
+  <div class="box">
+    <!--<div class="box-title" id="YZTitle">-->
+      <!--有赞-->
+    <!--</div>-->
+
+    <!--<div style="width: 100px;height: 100px;box-shadow: 100px 100px;">-->
+
+    <!--</div>-->
+    <style>
+      .border-demo{
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        background-color: #2aabd2;
+
+        border-top:50px solid red;
+        border-right:50px solid orange;
+        border-bottom:50px solid yellow;
+        border-left:50px solid green;
+      }
+    </style>
+    <div class="border-demo">
+
+    </div>
+    <div class="box-title">
+      css 几何图案
+    </div>
+    <div class="border">
+      <div class="border-width-0"></div>
+      <div class="border-width-1"></div>
+
+      <div class="border-radius-0" ></div>
+      <div class="border-radius-1" ></div>
+      <div class="border-radius-2" ></div>
+
+      <div class="box-skew-0"></div>
+      <div class="box-skew-1"></div>
+
+      <div class="border-background-0"></div>
+      <div class="border-background-1"></div>
+
+
+      <div class="pie-0"></div>
+
+
+    </div>
+
+    <div class="box-title">
+      css 水波纹
+    </div>
+    <div class="water">
+      <div class="ripple"></div>
+    </div>
+    <div class="box-title">
+      Chrome
+    </div>
+    <style>
+      .chrome {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin: 0 auto;
+        box-shadow: 0 0 4px #999, 0 0 2px #ddd inset;
+        background: radial-gradient(circle, #4FACF5 0, #2196F3 28%, transparent 28%),
+        radial-gradient(circle, #fff 33%, transparent 33%),
+        linear-gradient(-50deg, #FFEB3B 34%, transparent 34%),
+        linear-gradient(60deg, #4CAF50 33%, transparent 33%),
+        linear-gradient(180deg, #FF756B 0, #F44336 30%, transparent 30%),
+        linear-gradient(-120deg, #FFEB3B 40%, transparent 40%),
+        linear-gradient(-60deg, #FFEB3B 30%, transparent 30%),
+        linear-gradient(0deg, #4CAF50 45%, transparent 45%),
+        linear-gradient(60deg, #4CAF50 30%, transparent 30%),
+        linear-gradient(120deg, #F44336 50%, transparent 50%),
+        linear-gradient(180deg, #F44336 30%, transparent 30%);
+      }
+    </style>
+
+    <div>
+      <div class="chrome" id="ChromeBg"></div>
+    </div>
+    <div class="box-title" id="MoonBtn">
+      月亮
+    </div>
+    <style>
+      .moon-box{
+        display: none;
+        padding: 60px 0;
+      }
+      @keyframes lua {
+        0%{
+          box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+        }
+        50% {
+          box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+        }
+        100% {
+          box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+        }
+      }
+      .sky-box {
+        position: relative;
+      }
+      .moon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 128px;
+        height: 128px;
+        margin: -64px 0 0 -64px;
+        border-radius: 50%;
+        box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+        background: url("https://febetter.wang/img/bgMoon.png") no-repeat;
+        animation-name: lua;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+        background: url("https://febetter.wang/img/bgMoon.png") no-repeat;
+        background-size: contain;
+      }
+    </style>
+    <div class="moon-box" id="Moon">
+      <div class="sky-box">
+        <canvas id="Star" ></canvas>
+        <div class="moon"></div>
+      </div>
+    </div>
+
+    <style>
+      .shadow-box {
+        text-align: center;
+      }
+      .shadow-box > div {
+        display: inline-block;
+        margin: 60px;
+      }
+      .shadow {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border: 1px solid #86cbff;
+        box-sizing: border-box;
+        margin: 50px;
+        /*animation: change 3s infinite linear alternate;*/
+        overflow: hidden;
+      }
+      .shadow::before {
+         content: "";
+         position: absolute;
+         width: 50px;
+         height: 50px;
+         top: -50px;
+         left: -50px;
+         color: #86cbff;
+         box-shadow:
+           50px 50px, 150px 50px, 250px 50px,
+           50px 100px, 150px 100px, 250px 100px,
+           50px 150px, 150px 150px, 250px 150px,
+           50px 200px, 150px 200px, 250px 200px,
+           50px 250px, 150px 250px, 250px 250px;
+         animation: move 3s infinite linear;
+       }
+
+      @keyframes change {
+        25% {
+          transform: scale(.5);
+        }
+      }
+
+      @keyframes move {
+        25% {
+          transform: translate(50px);
+          color: #86cbff;
+          box-shadow:
+            50px 50px, 150px 50px, 250px 50px,
+            50px 100px, 150px 100px, 250px 100px,
+            50px 150px, 150px 150px, 250px 150px,
+            50px 200px, 150px 200px, 250px 200px,
+            50px 250px, 150px 250px, 250px 250px;
+        }
+        50% {
+          transform: translate(0px);
+          color: #86cbff;
+          border-radius: 0;
+          box-shadow:
+            50px 50px, 150px 50px, 250px 50px,
+            100px 100px, 200px 100px, 300px 100px,
+            50px 150px, 150px 150px, 250px 150px,
+            100px 200px, 200px 200px, 300px 200px,
+            50px 250px, 150px 250px, 250px 250px;
+        }
+        75% {
+          transform: translate(0px);
+          color: #86cbff;
+          border-radius: 50%;
+          box-shadow:
+            50px 50px, 150px 50px, 250px 50px,
+            100px 100px, 200px 100px, 300px 100px,
+            50px 150px, 150px 150px, 250px 150px,
+            100px 200px, 200px 200px, 300px 200px,
+            50px 250px, 150px 250px, 250px 250px;
+        }
+        100% {
+          border-radius: 0%;
+          box-shadow:
+            50px 50px, 150px 50px, 250px 50px,
+            50px 100px, 150px 100px, 250px 100px,
+            50px 150px, 150px 150px, 250px 150px,
+            50px 200px, 150px 200px, 250px 200px,
+            50px 250px, 150px 250px, 250px 250px;
+        }
+      }
+
+      .gradient {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border: 1px solid #86cbff;
+        box-sizing: border-box;
+        margin: 50px;
+        background-image: linear-gradient(90deg, #86cbff 0%, #86cbff 50%, #fff 50%, #fff 100%);
+        background-size:  100px 100px;
+      }
+    </style>
+
+    <div class="box-title">
+      阴影的渐变背景
+    </div>
+    <div class="shadow-box">
+      <div class="gradient"></div>
+      <div class="shadow"></div>
+    </div>
+
+    <style>
+      .ie-icon {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+      .ie-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-image: radial-gradient(#fff 38%, transparent 38%), radial-gradient(#86cbff 0, #86cbff 100%)
+      }
+
+      .ie-box:before {
+        content: "";
+        width: 285px;
+        height: 122px;
+        background: 0 0;
+        border-radius: 100%;
+        position: absolute;
+        top: 33px;
+        left: -45px;
+        margin: auto;
+        box-shadow: inset 0 12px 0 13px #86cbff, -35px -8px 0 -5px #fff;
+        transform: rotate(-35deg)
+      }
+
+      .ie-box:after {
+        content: "";
+        width: 120px;
+        height: 25px;
+        background: #86cbff;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        box-shadow: 50px 23px 0 -2px #fff
+      }
+    </style>
+
+    <div class="ie-icon">
+      <div class="ie-box"></div>
+    </div>
+
+    <style>
+      .zan-box {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+      }
+    </style>
+    <div >
+      <div class="zan-you zan-box"></div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const Demo = {
+      init() {
+       this.controlMoon();
+       this.chromeBg();
+       // this.titleYz()
+      },
+      titleYz() {
+        const yzArr = [
+          'linear-gradient(transparent 8%,#86cbff 8%,#86cbff 14%,transparent 14%,transparent 86%,#86cbff 86%,#86cbff 92%,transparent 92%)',
+
+        'linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0))',
+
+        'linear-gradient(45deg,transparent 40%,#86cbff 40%,#86cbff 60%,transparent 60%)',
+
+        'linear-gradient(white, white)'
+        ]
+        const domYZTitle = document.querySelector('#YZTitle');
+        let len = 1;
+        const setTime = setInterval(()=>{
+          const _arr = yzArr.slice(0,len);
+          const _bg = _arr.join(',');
+          domYZTitle.style.backgroundImage = _bg;
+          if(len > yzArr.length){
+            clearInterval(setTime);
+          }
+          len++;
+        },1000);
+      },
+      chromeBg() {
+        const chromeArr = [
+          'radial-gradient(circle, #4FACF5 0, #2196F3 28%, transparent 28%)',
+          'radial-gradient(circle, #fff 33%, transparent 33%)',
+          'linear-gradient(-50deg, #FFEB3B 34%, transparent 34%)',
+          'linear-gradient(60deg, #4CAF50 33%, transparent 33%)',
+          'linear-gradient(180deg, #FF756B 0, #F44336 30%, transparent 30%)',
+          'linear-gradient(-120deg, #FFEB3B 40%, transparent 40%)',
+          'linear-gradient(-60deg, #FFEB3B 30%, transparent 30%)',
+          'linear-gradient(0deg, #4CAF50 45%, transparent 45%)',
+          'linear-gradient(60deg, #4CAF50 30%, transparent 30%)',
+          'linear-gradient(120deg, #F44336 50%, transparent 50%)',
+          'linear-gradient(180deg, #F44336 30%, transparent 30%)'
+        ]
+        const domChromeBg = document.querySelector('#ChromeBg');
+        let len = 1;
+        const setTime = setInterval(()=>{
+          const _arr = chromeArr.slice(0,len);
+          const _bg = _arr.join(',');
+          // console.log(_bg);
+          domChromeBg.style.background = _bg;
+          if(len > chromeArr.length){
+            clearInterval(setTime);
+          }
+          len++;
+        },1000);
+
+      },
+      controlMoon() {
+        const domBtn = document.querySelector('#MoonBtn');
+        const domMoon = document.querySelector('#Moon');
+        let isClick = false;
+
+        domBtn.addEventListener('click', function(){
+          isClick = !isClick;
+          if (isClick) {
+            domMoon.style.display = 'block';
+            document.querySelector('body').style.backgroundColor = '#000';
+          } else {
+            domMoon.style.display = 'none';
+            document.querySelector('body').style.backgroundColor = 'transparent';
+          }
+        })
+      },
+    }
+    Demo.init();
+  </script>
+  <script>
+    let SkySetting = {
+        width:800,
+        height:300,
+        splitHeight:200,
+        stars:400,
+        maxStar:1.2,
+        minStar:0.6,
+        maxSpeed:0.1,
+        minSpeed:0.02,
+      },
+      domCanvas = document.querySelector('#Star'),
+      context = domCanvas.getContext('2d');
+    /*
+    * 画布实例
+    * */
+    let starSky = function(width,height,stars){
+      this.width = width;
+      this.height = height;
+      this.stars = stars;
+      this.aStars = [];
+    }
+    starSky.prototype = {
+      /*
+      * 入口
+      * */
+      start:function(){
+        domCanvas.width = this.width;
+        domCanvas.height = this.height;
+        context.fillStyle = 'rgba(0,0,0,1)';
+        context.fillRect(0,0,this.width,this.height);
+        this.render();
+      },
+      /*
+      * 重绘
+      * */
+      redraw:function(){
+        context.clearRect(0,0,this.width,this.height);
+        context.fillStyle = 'rgba(0,0,0,1)';
+        context.fillRect(0,0,this.width,this.height);
+      },
+      /*
+      * 新建星星实例
+      * 绘制星星
+      * window.requestAnimationFrame 动画函数
+      * */
+      render:function(){
+        this.redraw();
+        if(this.aStars.length <= this.stars){
+          let star = new Star();
+          this.aStars.push(star);
+        }
+        this.aStars.forEach(function(star){
+          star.draw();
+        })
+        window.requestAnimationFrame(()=>{
+          this.render();
+        });
+      },
+    }
+    /*
+    * 星星构造器
+    * */
+    let Star = function(){
+      this.randomPoint();
+    }
+    Star.prototype = {
+      /*
+      * 随机星星数据
+      * */
+      randomPoint:function(){
+        let _x = Math.random()*SkySetting.width,
+          _r = SkySetting.minStar + Math.random()*(SkySetting.maxStar - SkySetting.minStar),
+          _ran = Math.random()*10,
+          _rx = Math.random()*(SkySetting.maxSpeed-SkySetting.minSpeed) + SkySetting.minSpeed,
+          _y = _ran > 2 ? Math.random()*SkySetting.splitHeight: Math.random()*SkySetting.height,
+          _alphaMax = Math.random()*0.8 + 0.2,
+          _alphaMin = 0.2,
+          _alpha = 0;
+        this.x = _x;
+        this.y = _y;
+        this.r = _r;
+        this.rx = _rx;
+        this.alpha = _alpha;
+        this.alphaMax = _alphaMax;
+        this.alphaMin = _alphaMin;
+        this.alphaAction = true;
+      },
+      /*
+      * 绘制星星
+      * 星星变化
+      * */
+      draw:function(){
+        this.x += this.rx;
+        if(this.x + this.r >= SkySetting.width){
+          this.x = 0;
+        }
+        if(this.alphaAction){
+          if(this.alpha < this.alphaMax){
+            this.alpha += 0.05;
+          }else{
+            this.alphaAction = false
+          }
+        }
+        if(!this.alphaAction){
+          if(this.alpha > this.alphaMin){
+            this.alpha -= 0.02;
+          }
+          else{
+            this.alphaAction = true;
+          }
+        }
+        context.beginPath();
+        context.fillStyle = 'rgba(255,255,255,'+this.alpha.toString()+')';
+        context.arc(this.x,this.y,this.r,0,Math.PI*2,true);
+        context.closePath();
+        context.fill();
+      }
+    }
+    /*
+    * 构造星空实例
+    * */
+    let sky = new starSky(SkySetting.width,SkySetting.height,SkySetting.stars);
+    sky.start();
+  </script>
+</body>
+</html>

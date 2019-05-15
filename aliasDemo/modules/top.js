@@ -1,7 +1,7 @@
 var a = []
-var omed = 21;
-var dddd = [1,2,3];
-dddd.forEach(item => item);
+var demo = 12;
+var dd = [1,2,3];
+dd.map(item => item);
 
 module.exports = {
   getA() {
