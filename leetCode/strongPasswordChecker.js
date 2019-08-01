@@ -8,6 +8,7 @@
  * 插入、删除、替换任一字符都算作一次修改。
  * @param s
  */
+// 这是个例子
 const rules = [
   s => {
     let check = false;
