@@ -4,14 +4,22 @@
   "description": "webpack webpack demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack --colors --display-modules",
+    "dll": "cross-env NODE_ENV=production webpack --config webpack.dll.config.js --colors --display-modules"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "vue": "2.3.3"
-  },
   "devDependencies": {
-    "webpack": "2.2.0"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.1",
+    "lodash": "^4.17.15",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "vant": "^2.1.8",
+    "vue": "^2.6.10"
   }
 }
