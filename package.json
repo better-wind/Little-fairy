@@ -19,10 +19,16 @@
   },
   "homepage": "https://github.com/luyi10year/Little-fairy#readme",
   "devDependencies": {
+    "@types/jest": "24.0.16",
+    "@types/koa": "2.0.48",
+    "@types/koa-router": "7.0.40",
+    "@types/lodash": "4.14.122",
+    "@types/node": "11.9.5",
     "commander": "^2.15.1",
     "download-git-repo": "^1.0.2"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "typescript": "3.4.4"
   }
 }

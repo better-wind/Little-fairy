@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  window.onerror = function () {
+    console.log('全局捕获错误')
+  }
+
+  try {
+    console.log('try');
+  } catch (e) {
+    console.log('catch')
+  } finally {
+    throw new Error('抛出错误');
+    console.log('finally')
+  }
+</script>
+</body>
+</html>
