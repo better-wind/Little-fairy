@@ -28,7 +28,7 @@
     "download-git-repo": "^1.0.2"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "typescript": "3.4.4"
   }
 }
